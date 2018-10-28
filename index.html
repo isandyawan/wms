@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<title>Web Saya</title>
+		 <meta name="theme-color" content="#adf442"/>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="Description" content="Percobaan Web">
+ <link rel="stylesheet" type="text/css" href="css/my-css.css?1">
+ <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+<div class="container">
+<div class='menu'><a href="#"><img id="home" src="images/home.png" alt="home"/></a></div>
+<div class='sidebar'><img style="padding : 5% 5% 5% 5%;max-width: calc(100% - 10%); max-height: calc(100%-20%)" src="images/foto.jpg" alt="Foto"/></div>
+<div class='konten'><a href="project1/add2numbers.html">Penjumlahan</a></div>
+<div class='konten'><a href="project2/map.html">Map</a></div>
+<div class='konten'><a href="project3/index.html">Tugas Fetch</a></div>
+<div class='konten'><a href="restaurant">Restaurant</a></div>
+<div class='footer'>Ignatius Sandyawan</div>
+</div>
+<script type="text/javascript">
+	if (!('serviceWorker' in navigator)) {
+	 console.log('Browser tidak mendukung Service worker');
+	}
+	else {
+	 navigator.serviceWorker.register('sw.js', {
+		 scope: '/'
+		})
+	 .then(function() {
+	 console.log('Service Worker terdaftar (registered)');
+	 })
+	 .catch(function(error) {
+	 console.log('Error: Gagal melakukan registrasi service workder:', error);
+	 });
+	}
+
+</script>
+</body>
+</html>
